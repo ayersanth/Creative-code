@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="square"></div>
+    </div>
+	
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+
+	<script>
+        
+		
+        function gamble(){
+            
+            var rando = Math.random();
+            
+            return Math.round(rando); 
+            
+        }
+        
+        
+        function colour(number){
+            
+            var getSquare = document.getElementById(square);
+            
+            if (number < 0.5){
+                document.getElementById("square").style.backgroundcolor = "black";
+            }
+            else {
+                document.getElementById("square").style.backgroundcolor = "white";
+            };
+            
+        }
+            
+       document.getElementById(square).addEventListener("click", colour(gamble()));
+          
+    
+	</script>
+
+</body>
+
+</html>
