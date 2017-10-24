@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+	
+	
+	<p id="output"></p>
+	
+
+	<script>
+		
+
+		var aString = "hello"
+
+		function caseUp (){
+
+			var res = aString.toUpperCase();
+			return res;
+
+		}
+
+		document.getElementById("output").innerHTML = caseUp();
+
+		(function (){
+			console.log("a");
+			window.status = "DOING STUFF!";
+		})()
+
+	</script>
+	
+</body>
+</html>
