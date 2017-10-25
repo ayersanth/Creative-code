@@ -20,31 +20,46 @@
 	  crossorigin="anonymous"></script>
 
 	<script>
-        
+
+        var getSquare = document.getElementById("square");
 		
         function gamble(){
             
             var rando = Math.random();
             
-            return Math.round(rando); 
+            return Math.round(rando);
+
             
         }
         
+        // console.log(gamble());
         
-        function colour(number){
+        function colour(chance){
+
+            console.log("v")
             
-            var getSquare = document.getElementById(square);
+            var getSquare = document.getElementById("square");
             
-            if (number < 0.5){
-                document.getElementById("square").style.backgroundcolor = "black";
+            if (chance == 0){
+                getSquare.style.backgroundColor = "black";
+                console.log("a")
             }
             else {
-                document.getElementById("square").style.backgroundcolor = "white";
+                getSquare.style.backgroundColor = "white";
+                console.log("b")
+                // console.dir(getSquare);
             };
+
             
         }
+
+        // console.log(colour(gamble()));
             
-       document.getElementById(square).addEventListener("click", colour(gamble()));
+       // document.getElementById("square").addEventListener("click", colour(gamble()), false);
+
+        getSquare.onclick = function (){
+            colour(gamble());
+        }
           
     
 	</script>
